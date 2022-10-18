@@ -1,5 +1,6 @@
 var limitPokemons = 18
 var backPokemon = false
+var selectedType = ""
 
 $(document).ready(loadPokemons());
 
@@ -22,7 +23,7 @@ function loadPokemons() {
                     if (pokemons.hasOwnProperty.call(pokemons, pokemon)) {
                          const element = pokemons[pokemon];
                          document.getElementById("cards").innerHTML += `
-                                   <div class="col-sm-2 cardCustom">
+                                   <div id="ty`+ element['url'] +`" class="col-sm-2 cardCustom">
                                         <div class="card">
                                              <img id="`+ element['name'] + `" onmouseover="viraPokemon(false,'` + element['url'] + `','` + element['name'] + `')" onmouseout="viraPokemon(true,'` + element['url'] + `','` + element['name'] + `')" src="` + getImg(element['url']) + `" class="card-img-top">
                                              <div id="`+ element['url'] + `" class="card-header">              
@@ -144,6 +145,7 @@ function getImg(pokeUrl) {
 
 function getType(pokeUrl) {
      var Types
+     let arrayTypes = []
      $.ajax({
           url: pokeUrl,
           method: 'GET',
@@ -151,6 +153,15 @@ function getType(pokeUrl) {
           dataType: "json",
           success: function (data) {
                Types = data['types'];
+               for (const isTypeFiltred in Types) {
+                    if (Object.hasOwnProperty.call(Types, isTypeFiltred)) {
+                         let element = Types[isTypeFiltred];
+                         arrayTypes.push(element['type']['name'])     
+                    }
+               }
+               if (!arrayTypes.includes('grass')) {
+                    document.getElementById("ty"+pokeUrl).hidden = true
+               }
           }
      });
      return Types;
@@ -165,4 +176,8 @@ function loadMorePokemons() {
           limitPokemons += 18
           loadPokemons()
      }
+}
+
+function filterType(typeFiltered) {
+     selectedType = typeFiltered;
 }

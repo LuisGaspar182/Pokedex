@@ -18,31 +18,46 @@
   <!-- Barra de navegação -->
   <nav class="navbar navbar-expand-lg fixed-top bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="./statics/img/logo.png" alt=""></a>
+      <a class="navbar-brand" href=""><img src="./statics/img/logo.png" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Types
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#" onclick="filterType('grass')">Grass</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterType('poison')">Poison</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterType('fire')">Fire</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterType('flying')">Flying</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterType('water')">Water</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterType('bug')">Bug</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterType('normal')">Normal</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterType('eletric')">Electric</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterType('ground')">Ground</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterType('fairy')">Fairy</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterType('fighting')">Fighting</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterType('psychic')">Psychic</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterType('dragon')">Dragon</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterType('rock')">Rock</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterType('steel')">Steel</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterType('ice')">Ice</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterType('ghost')">Ghost</a></li>
+              <li><a class="dropdown-item" href="#" onclick="filterType('dark')">Dark</a></li>
+            </ul>
+          </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Features</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown link
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
           </li>
         </ul>
       </div>
