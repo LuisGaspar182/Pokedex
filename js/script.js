@@ -183,4 +183,5 @@ function loadMorePokemons() {
 
 function filterType(typeFiltered) {
      selectedType = typeFiltered;
+     loadPokemons();
 }
