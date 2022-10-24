@@ -159,7 +159,7 @@ function getType(pokeUrl) {
                          arrayTypes.push(element['type']['name'])     
                     }
                }
-               if (!arrayTypes.includes('grass')) {
+               if (!arrayTypes.includes('selectedType')) {
                     document.getElementById("ty"+pokeUrl).hidden = true
                }
           }
