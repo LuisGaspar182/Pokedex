@@ -159,7 +159,10 @@ function getType(pokeUrl) {
                          arrayTypes.push(element['type']['name'])     
                     }
                }
-               if (!arrayTypes.includes('selectedType')) {
+               if (selectedType === "") {
+                    
+               }
+               else if (!arrayTypes.includes('selectedType')) {
                     document.getElementById("ty"+pokeUrl).hidden = true
                }
           }
