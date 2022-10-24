@@ -184,5 +184,6 @@ function loadMorePokemons() {
 function filterType(typeFiltered) {
      limitPokemons = 150
      selectedType = typeFiltered;
+     console.log(selectedType);
      loadPokemons();
 }
