@@ -162,7 +162,7 @@ function getType(pokeUrl) {
                if (selectedType === "") {
                     
                }
-               else if (!arrayTypes.includes('selectedType')) {
+               else if (!arrayTypes.includes(selectedType)) {
                     document.getElementById("ty"+pokeUrl).hidden = true
                }
           }
@@ -182,6 +182,7 @@ function loadMorePokemons() {
 }
 
 function filterType(typeFiltered) {
+     limitPokemons = 150
      selectedType = typeFiltered;
      loadPokemons();
 }
